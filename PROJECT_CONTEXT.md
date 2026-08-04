@@ -90,3 +90,16 @@ Modular monolith modules:
 
 \- SQL alanında daha temel ve eğitim odaklı ilerlenmeli.
 
+\- Algoritma veya kodlama problemi yalnızca adıyla verilmemeli. Her problem için kısa problem tanımı, input, beklenen output, en az bir örnek ve önemli varsayımlar baştan açıklanmalı.
+
+\- Kod yazma bloklarında gereksiz yazılı rapor yükü oluşturulmamalı. Uzun analiz, her testin ayrı açıklaması veya tekrar tekrar console çıktısı yalnızca bloğun öğrenme amacı bunu gerektiriyorsa istenmeli.
+
+\- Test beklentileri kısa ve hedefli olmalı. Normal durumda bir temel senaryo ve bir anlamlı edge case yeterlidir. Plan özel olarak daha fazla test istiyorsa toplam sayı açıkça belirtilmeli.
+
+\- Kullanıcının daha önce sunduğu compile, çıktı veya çalışma kanıtı yeniden istenmemeli. Yalnızca eksik ya da çelişkili kanıt varsa ek doğrulama talep edilmeli.
+
+\- Öncelik kod yazmak, düşünmek ve debug etmektir. Dokümantasyon öğrenme kanıtı oluşturacak kadar tutulmalı; kodlama sürecindeki sürtünmeyi gereksiz yere artırmamalıdır.
+
+\- Kullanıcıdan beklenen çıktı her blokta kısa ve somut biçimde belirtilmeli. Zorunlu olmayan ekran görüntüsü, uzun açıklama veya biçimsel rapor istenmemeli.
+
+\- Teknik açıklama ve mülakat pratiği blokları dışında, kullanıcı doğru çalışan kod sunduğunda açıklama zorunluluğu kısa tutulmalı ve gerekli kavramlar sohbet içinde kontrol edilmelidir.
