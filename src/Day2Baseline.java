@@ -1,4 +1,5 @@
-import java.util.Scanner;
+import java.util.*;
+
 
 public class Day2Baseline {
     static void main(String[] args) {
@@ -78,6 +79,20 @@ public class Day2Baseline {
         // 8. egzersiz - int[] dizisini metoda gönderip ilk elemanı değiştirme deneyi
         listeDegistir(sayilar);
         System.out.println(sayilar[0]);
+
+
+
+        // 1. Problem - Contains Duplicate
+        int[] duplicateSayilar = {1,4,6,3,6,0,2,5};
+        boolean sonuc1 = containsDuplicate(duplicateSayilar);
+        System.out.println("Duplicate olan sayı var mı? " + sonuc1);
+
+        // 2. Problem - Valid Anagram
+        String anagramMetin1 = "jaa";
+        String anagramMetin2 = "ajag";
+        boolean sonuc2 = validAnagram(anagramMetin1, anagramMetin2);
+        System.out.println("Girilen kelime anagram mı? " + sonuc2);
+
     }
 
     // 8. egzersiz - int[] dizisini metoda gönderip ilk elemanı değiştirme deneyi
@@ -103,5 +118,95 @@ public class Day2Baseline {
     }
 
 
+    // 1. Problem - Contains Duplicate
+    // Girdimiz sayı listesi, çıktımız ise true/false olmalı
+    // Eğer x sayısından 1 den fazla varsa true olmalı, yoksa false.
+    // Tek tek hepsini gezip dictionary üzerinde hangi sayıdan kaç tane var diye tutabiliriz
+    // Set kullanmak daha faydalı olabilir eğer 1 den fazla olduğunu görürsek direkt true döneriz.
+    // Zaman karmaşıklığı O(n), alan karmaşıklığı O(n) en kötü.
+    public static boolean containsDuplicate(int[] input){
+        Set<Integer> benzersizler = new HashSet<>();
 
+        for (int sayi : input){
+            if(benzersizler.contains(sayi)){
+                return true;
+            }
+            benzersizler.add(sayi);
+        }
+
+        return false;
+    }
+    // Tekrar eden sayı bulduğumuz an return true yapıyoruz.
+    // Eğer işin sonunda tekrar eden sayı yoksa, false dönecek.
+
+
+
+    // 2. Problem - Valid Anagram
+    // İki farklı metin aynı karakterleri aynı adetlerde içerir.
+    // Alan karmaşıklığı 2n yani n = input length O(n)
+    // Zaman karmaşıklığı ise O(n) iç içe 2 döngü yok alt alta iki döngü var.
+    // Daha iyi çözümü var gibi geliyor ama bence güzel kaliteli bir çözüm.
+    public static boolean validAnagram(String input1, String input2){
+        Map<Character, Integer> cetele = new HashMap<>();
+
+        char[] charInput1 = input1.toCharArray();
+        char[] charInput2 = input2.toCharArray();
+
+        for(char c : charInput1){
+            cetele.put(c, cetele.getOrDefault(c,0) + 1);
+        }
+
+        for(char c : charInput2){
+            if(cetele.containsKey(c)){
+                cetele.replace(c, cetele.get(c)-1);
+
+                if(cetele.get(c) == 0){
+                    cetele.remove(c);
+                }
+            }
+            else{
+                return false;
+            }
+        }
+
+        if(cetele.isEmpty()){
+            return true;
+        }
+
+        return false;
+    }
+
+
+
+    // Bakmadan tek seferde yazıldı.
+    public static boolean yenidenAnagram(String input1, String input2){
+        Map<Character, Integer> cokluSayac = new HashMap<>();
+        char[] charInput1 = input1.toCharArray();
+        char[] charInput2 = input2.toCharArray();
+
+        if(charInput1.length != charInput2.length){
+            return false;
+        }
+
+        for(char c : charInput1){
+            cokluSayac.put(c,cokluSayac.getOrDefault(c,0) + 1);
+        }
+
+        for(char c : charInput2){
+            if(cokluSayac.containsKey(c)){
+                cokluSayac.replace(c, cokluSayac.get(c) - 1);
+
+                if(cokluSayac.get(c) == 0){
+                    cokluSayac.remove(c);
+                }
+            }
+            else{
+                return false;
+            }
+        }
+        if(cokluSayac.isEmpty()){
+            return true;
+        }
+        return false;
+    }
 }

@@ -37,3 +37,33 @@ Henüz emin değilim; tekrar denemem gerekiyor.
 
 &#x20; için henüz bağımsız olduğumu söyleyemem.
 
+
+
+## Gün 2
+
+- AI'ı hangi amaçla kullandım?
+  Görevlerin kapsamını netleştirmek, yazdığım kodu inceletmek ve ilk mantık hatalarını görmek için kullandım.
+
+- İlk çözümüm neydi?
+  Contains Duplicate için HashSet kullandım.
+  Valid Anagram problemini başlangıçta palindrome kontrolü olarak yanlış yorumladım.
+  Daha sonra karakter sayılarını HashMap içinde tutan bir çözüm geliştirdim.
+
+- AI ne önerdi?
+  Anagram ve palindrome arasındaki farkı açıkladı.
+  İkinci metinde bulunmayan karakterlerin görmezden gelindiği edge case'i gösterdi.
+  Java pass-by-value davranışını daha doğru teknik ifadelerle açıklamama yardım etti.
+  StringBuilder sonucundaki gereksiz son boşluğu fark ettirdi.
+
+- Hangi dış yardımları kullandım?
+  Valid Anagram probleminin tanımını internetten kontrol ettim.
+  char değerini String'e dönüştürmek için String.valueOf kullanımına baktım.
+  Set oluşturma syntax'ını hatırlamak için eski koduma kısa süre baktım.
+
+- Hangi öneriyi reddettim?
+  Çalışan kodu gereksiz yere yeniden tasarlamadım.
+  Hazır kod kopyalamadım; düzeltmeleri kendim yazdım.
+
+- Aynı kodu yarın AI olmadan yazabilir miyim?
+  Contains Duplicate ve Valid Anagram çözümlerini tekrar yazabileceğimi düşünüyorum.
+  Valid Anagram metodunu günün sonunda önceki koda bakmadan tekrar yazdım.
