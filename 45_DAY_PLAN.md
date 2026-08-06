@@ -634,7 +634,7 @@ Her biri için bir kullanım senaryosu hazırla:
 
 
 
-`equals()` ve `hashCode()` ilişkisini incele. Bir `User` sınıfını `HashSet` içine ekleyerek yanlış ve doğru davranışı gözlemle.
+`equals()` ve `hashCode()` ilişkisini incele. Bir `Day3UserHash` sınıfını `HashSet` içine ekleyerek yanlış ve doğru davranışı gözlemle.
 
 
 
@@ -668,7 +668,7 @@ Oracle’ın Collections dokümantasyonunu yalnızca takıldığın API’leri k
 
 
 
-\- `User`
+\- `Day3UserHash`
 
 \- `Goal`
 
@@ -696,7 +696,7 @@ Bir kullanıcının toplam ilerlemesini hesaplayan metot yaz.
 
 
 
-\*\*Çıkış kriteri:\*\* `User` nesnelerinin eşitlik davranışı test edilmiş olmalı.
+\*\*Çıkış kriteri:\*\* `Day3UserHash` nesnelerinin eşitlik davranışı test edilmiş olmalı.
 
 
 
@@ -1048,7 +1048,7 @@ AI ve internet kapalı:
 
 \- Queue kullanımı
 
-\- Bir `User` sınıfı
+\- Bir `Day3UserHash` sınıfı
 
 \- Comparator ile skor sıralama
 
@@ -1440,9 +1440,9 @@ Entity ilişkilerini kâğıda veya Mermaid ile çiz:
 
 
 
-\- User 1–N Goal
+\- Day3UserHash 1–N Goal
 
-\- User N–N Challenge
+\- Day3UserHash N–N Challenge
 
 \- Challenge 1–N ProgressEntry
 
@@ -1572,7 +1572,7 @@ Yalnızca:
 
 
 
-\- `User`
+\- `Day3UserHash`
 
 \- `Goal`
 
@@ -1588,7 +1588,7 @@ Kurallar:
 
 \- Entity’yi doğrudan API response olarak döndürme.
 
-\- `User` içinde password alanını response’a çıkarma.
+\- `Day3UserHash` içinde password alanını response’a çıkarma.
 
 \- Setter’ları kontrolsüz şekilde her alana açma.
 
@@ -2290,7 +2290,7 @@ Response:
 
 \- Rank
 
-\- User ID
+\- Day3UserHash ID
 
 \- Username
 
@@ -2824,7 +2824,7 @@ Senaryo:
 
 
 
-> User A kendi token’ıyla User B’nin goal ID’sini URL’ye yazarak görüntülemeye veya silmeye çalışıyor.
+> Day3UserHash A kendi token’ıyla Day3UserHash B’nin goal ID’sini URL’ye yazarak görüntülemeye veya silmeye çalışıyor.
 
 
 
@@ -2910,7 +2910,7 @@ Entity’yi doğrudan serialize etmediğini doğrula. Mass assignment riskini in
 
 
 
-\*\*Çıkış kriteri:\*\* User A hiçbir şekilde User B’nin özel goal verisine erişememeli.
+\*\*Çıkış kriteri:\*\* Day3UserHash A hiçbir şekilde Day3UserHash B’nin özel goal verisine erişememeli.
 
 
 
@@ -3292,9 +3292,9 @@ Bir normal akış ve bir saldırı akışı kaydet:
 
 
 
-\- User A goal oluşturur.
+\- Day3UserHash A goal oluşturur.
 
-\- User B aynı goal’a erişmeye çalışır.
+\- Day3UserHash B aynı goal’a erişmeye çalışır.
 
 \- API 403 veya 404 ile engeller.
 
