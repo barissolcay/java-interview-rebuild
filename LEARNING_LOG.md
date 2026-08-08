@@ -134,3 +134,55 @@
 - Bir Goal nesnesinin toplam progress hesabında kendi `progressEntries` alanını kullanması gerektiğini açıklamak
 - HashMap'in ortalama O(1) erişimini bucket, collision, hashCode ve equals kavramlarıyla anlatmak
 - Java HashMap'in collision durumunda linear probing kullanmadığını hatırlamak
+
+
+
+
+
+# Gün 4
+
+## Çalıştığım konular
+
+- ArrayDeque ile stack ve queue kullanımı
+- PriorityQueue ile öncelikli kuyruk
+- Custom nesneleri Comparator ile skora göre sıralama
+- Valid Parentheses problemini yeniden çözme
+- RecentRequests sınıfı ile FIFO request kuyruğu
+- Stack ve heap memory kavramları
+- Stack veri yapısı ile JVM stack farkı
+- Heap veri yapısı ile JVM heap memory farkı
+- Queue API'de offer/poll/peek ve add/remove/element farkları
+- JOB_SKILLS.md dosyasını oluşturma
+
+## Öğrendiklerim
+
+- ArrayDeque hem stack hem queue davranışı için kullanılabilir.
+- Stack LIFO, queue FIFO mantığıyla çalışır.
+- Queue'da elemanları önce ekleyip daha sonra sırayla çıkarmak FIFO davranışını daha net gösterir.
+- PriorityQueue normal bir sıralı liste değildir; öncelikli elemanın poll veya peek ile alınmasını garanti eder.
+- Custom bir nesneyi PriorityQueue içinde sıralamak için karşılaştırma kuralı gerekir.
+- Comparator ile Day4UserScore nesnelerini score alanına göre önceliklendirebildim.
+- Valid Parentheses probleminde açılış parantezlerini stack içinde tutup kapanışları son açılan parantezle eşleştirmek gerekir.
+- JVM stack method çağrıları ve stack frame'lerle ilgilidir; program içinde kullandığım stack veri yapısıyla aynı şey değildir.
+- JVM heap nesnelerin yaşadığı memory alanıdır; PriorityQueue bağlamındaki heap ise bir veri yapısıdır.
+- poll ve peek boş queue'da null dönebilir; remove ve element boş queue'da exception üretir.
+- offer ve add ikisi de ekleme yapar ancak kapasite problemi olduğunda davranışları farklıdır.
+
+## Bağımsız çalışma değerlendirmesi
+
+- ArrayDeque ile stack kullanımını bağımsız yazdım.
+- Queue örneğini kurdum ancak ilk sürümlerde elemanları gerçekten kuyruktan işleme mantığında hata yaptım. Yönlendirmeyle FIFO akışını düzelttim.
+- Valid Parentheses çözümünü bağımsız olarak yeniden yazdım ve doğru sonuçları aldım.
+- RecentRequests sınıfını bağımsız oluşturdum.
+- PriorityQueue<Integer> kullanımını yapabildim ancak kullanıcı ve skoru birlikte tutan custom nesneleri nasıl sıralayacağımı bağımsız kuramadım.
+- Comparator syntax'ı için doğrudan yardım aldım.
+- Stack/heap memory ve JVM kavramlarında teorik bilgimin zayıf olduğunu gördüm. Açıklamadan sonra veri yapısı ile runtime memory kavramlarını ayırabildim.
+
+## Yarın hatırlamam gerekenler
+
+- Stack = LIFO, Queue = FIFO.
+- ArrayDeque stack ve queue için kullanılabilir.
+- PriorityQueue'da custom nesneler için karşılaştırma kuralı gerekebilir.
+- JVM stack ile stack veri yapısı aynı şey değildir.
+- JVM heap memory ile heap veri yapısı aynı şey değildir.
+- poll/peek ile remove/element arasındaki boş queue davranışını hatırlamak.

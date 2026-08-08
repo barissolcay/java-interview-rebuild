@@ -1,8 +1,8 @@
 # Güncel Durum
 
-- Mevcut gün: Gün 4
-- Mevcut blok: Blok 1 — Stack ve Queue
-- Son tamamlanan: Gün 3
-- Sıradaki adım: ArrayDeque ile stack ve queue, PriorityQueue ile heap kullanımını kodlamak
-- AI alanı: Kırmızı — ilk kodlama bölümünde çözüm, syntax ve ipucu yok
+- Mevcut gün: Gün 5
+- Mevcut blok: Blok 1 — Recall
+- Son tamamlanan: Gün 4
+- Sıradaki adım: Class, object, interface, abstract class ve record kavramlarını hafızadan birer cümleyle açıklamak
+- AI alanı: Kırmızı — recall cevapları önce bağımsız verilecek
 - Blok durumu: Başlanmadı

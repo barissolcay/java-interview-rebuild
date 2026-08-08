@@ -114,3 +114,39 @@ Henüz emin değilim; tekrar denemem gerekiyor.
   HashMap Two Sum çözümünde gerekli sayının target - currentNumber olarak hesaplandığını hatırlamam gerekiyor.
   equals ve hashCode sözleşmesini anlıyorum, ancak equals(Object), instanceof ve casting syntax'ını tamamen bağımsız yazmak için tekrar yapmam gerekiyor.
   User, Goal ve ProgressEntry modelini List kullanarak yeniden kurabileceğimi düşünüyorum.
+
+
+
+
+
+
+## Gün 4
+
+- AI'ı hangi amaçla kullandım?
+  Yazdığım stack, queue, PriorityQueue, Valid Parentheses ve RecentRequests kodlarını inceletmek için kullandım.
+  Stack/heap memory ve JVM kavramlarını öğrenmek için teknik açıklama aldım.
+
+- İlk çözümüm neydi?
+  Stack ve queue için ArrayDeque kullandım.
+  PriorityQueue'yu önce yalnızca Integer skorlarla kurdum.
+  Daha sonra kullanıcı ve skoru birlikte tutmak için Day4UserScore sınıfı oluşturdum.
+  Valid Parentheses ve RecentRequests çözümlerini kendim yazdım.
+
+- AI ne önerdi?
+  Queue örneğinde eleman eklemek ile gerçekten işlemek arasındaki farkı fark ettirdi.
+  Döngü sırasında queue size değerinin değişmesinden kaynaklanan mantık hatasını gösterdi.
+  PriorityQueue içinde custom nesnelerin karşılaştırılması gerektiğini açıkladı.
+  Stack veri yapısı, JVM stack, heap veri yapısı ve JVM heap memory arasındaki farkları açıkladı.
+
+- Hangi syntax veya API yardımını aldım?
+  PriorityQueue için Comparator lambda syntax'ını doğrudan aldım:
+  Day4UserScore nesnelerini score alanına göre sıralamak için Integer.compare kullanımı konusunda yardım aldım.
+  Queue API'deki offer/poll/peek ve add/remove/element farklarını öğrendim.
+
+- Hangi öneriyi reddettim?
+  Çalışan kodu gereksiz yere yeniden tasarlamadım.
+  Stack, queue ve Valid Parentheses çözümlerimi hazır kodla değiştirmedim.
+
+- Aynı kodu yarın AI olmadan yazabilir miyim?
+  ArrayDeque ile temel stack ve queue kullanımını ve Valid Parentheses çözümünü tekrar yazabileceğimi düşünüyorum.
+  PriorityQueue'da custom nesne + Comparator kullanımını tamamen bağımsız yazabilmek için tekrar yapmam gerekiyor.
